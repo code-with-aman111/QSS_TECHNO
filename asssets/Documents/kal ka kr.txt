@@ -1,0 +1,31 @@
+class Solution {
+    bool check(int a[],int b[]){
+        for(int i=0;i<26;i++){
+            return true;
+        }
+        return false;
+    }
+public:
+    bool checkInclusion(string s1, string s2) {
+      int arr[26]={0};
+      int n=s1.length();
+      for(int i=0;i<n;i++){
+          char ch=s1[i];
+          int num=s1[i]-'a';
+          arr[num]++;
+      }
+         int m=s2.size();
+         int i=0;
+        int arr2[26]={0};
+         while(i<n && i<m){
+           char ch=s2[2];
+           int num=s2[i]-'a';
+           arr2[i]++;
+    }
+    if(check(arr1,arr2)) return 1;
+    int j=0;
+    while(j<s2.length){
+        
+    }
+    }
+};

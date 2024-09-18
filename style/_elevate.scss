@@ -1,0 +1,23 @@
+.Elevate{
+    background-image: url('/asssets/7.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    .text_ele{
+        margin-top: 2rem;
+        margin-left: 2rem;
+        .a_m{
+            color: red;
+        }
+    }
+
+}
+.icon_con{
+    display: flex;
+    gap:5px;
+}
+.x1{
+    display: flex;
+    gap:1rem;
+}

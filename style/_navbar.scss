@@ -1,0 +1,157 @@
+$primary-grey: rgb(43, 37, 37);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $primary-grey;
+  height: 5rem;
+  position: sticky;
+  top:0;
+  z-index: 1000;
+  .logo img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .about_nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+
+  .about_nav ul li {
+    margin: 0 1rem;
+  }
+
+  .about_nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .about_nav ul li a:hover {
+    color: lighten($primary-grey, 20%);
+  }
+
+  .btn_nav {
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border: none;
+  }
+
+  .menu_toggle {
+    display: none; // Hidden by default
+  }
+
+  .hamburger {
+    display: none; // Hidden on large screens
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 1rem;
+
+    span {
+      background-color: white;
+      height: 3px;
+      width: 100%;
+      display: block;
+      border-radius: 5px;
+    }
+  }
+
+  .mobile_nav {
+    display: none; // Hidden by default
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    background-color: $primary-grey;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    transform: translateY(-20px);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      li {
+        margin: 1rem 0;
+      }
+
+      a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+  }
+
+  @media (max-width: 768px) {
+    .about_nav {
+      display: none; // Hide the normal nav on smaller screens
+    }
+
+    .hamburger {
+      display: flex; // Show hamburger icon on smaller screens
+    }
+
+    .menu_toggle:checked ~ .mobile_nav {
+      display: block;
+      opacity: 1;
+      transform: translateY(0); // Show the mobile nav when checkbox is checked
+      animation: slideDown 0.4s ease forwards; 
+    }
+
+     .menu_toggle:not(:checked) ~ .mobile_nav {
+      animation: slideUp 0.4s ease forwards; // Trigger slide-up animation
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}

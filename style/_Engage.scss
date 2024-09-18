@@ -1,0 +1,45 @@
+.Engagement {
+    background-image: url('/asssets/engagement-models-cta-banner.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
+  
+  .Eng_main {
+    text-align: center;
+    color: white; 
+  }
+  
+  .Eng_h1 {
+    // text-align: center;
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+  }
+  
+  .Eng_p {
+    // text-align: center;
+    font-size: 1.2rem; 
+    margin-bottom: 30px;
+  }
+
+  // .btn_Eng{
+  //   text-align: center;
+  // }
+  
+  .btn_Eng button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .btn_Eng button:hover {
+    background-color: #0056b3;
+  }
+  

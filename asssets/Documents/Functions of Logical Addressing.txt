@@ -1,0 +1,53 @@
+Functions of Logical Addressing
+Unique Identification: Each device on a network must have a unique IP address to ensure accurate delivery of data packets.
+Hierarchical Structure: IP addresses are hierarchical, allowing for efficient routing of data packets. The structure enables the identification of networks and specific devices within those networks.
+Routing: Logical addresses are used by routers to determine the best path for data to travel across interconnected networks.
+Subnetting: Dividing a larger network into smaller, manageable sub-networks (subnets) is facilitated by logical addressing. This improves network performance and security.
+==========================================================================================
+Classful addressing is an early method of IP address allocation in computer networks, where the IP address space is divided into five predefined classes (A, B, C, D, and E). Each class has a specific range of addresses and a fixed number of bits used for the network and host portions. This method was simple and straightforward but had significant limitations that led to its replacement by classless addressing (CIDR).
+A.2^7-2 net id
+2^24-2 host id
+=========================================
+B.2^14 NET ID
+  2^16-2 HOST ID
+TOTAL 2^30
+====================================
+C.2^31total
+  2^21 net id
+  2^8-2
+=======================
+classless add->variable length add 
+200.10.20.40/28 here 28 is no of 1's
+/28->net id and rest is host id
+source ka add nikalana ho toh /28 ko 1 rhne do baki host id ko 0 kr do
+===================================
+subnetting------------>bigger network ko smaller me divide kr lena
+1st subnet->200.1.2.0   &&  200.1.2.128[iska pahla bit 1 hota]
+subnet me host id li jati hai 
+jab 2 part hai toh 0 aur 1
+hab 4 part hai toh 00 01 10 11
+incoming add xor default addd is masking
+===========================================================
+Distance Vector Routing->Bellman-Ford Algorithm->which each router maintains a table (vector) that holds the minimum distance to every other router in the network
+
+Link State Routing(more complex)->Dijkstra-> which each router has a complete map of the network topology.
+===============================================================
+Network Address Translation (NAT) is a method used in computer networks to remap one IP address space into another. It modifies the IP address information in the headers of packets while they are in transit across a traffic routing device, typically a router or firewall
+=======================================================================
+Direct End-to-End Connectivity: IPv6 was designed to provide direct end-to-end connectivity, which means NAT is not necessary and generally not used in IPv6 networks.
+====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

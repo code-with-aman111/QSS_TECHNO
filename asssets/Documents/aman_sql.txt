@@ -1,0 +1,6 @@
+var con=mysql.createConnection({
+    host:"190.92.174.26",
+    user:"projectu_test",
+    password:"BflSdQxhV8((",
+    database:"projectu_test"
+});

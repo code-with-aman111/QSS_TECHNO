@@ -1,0 +1,71 @@
+chapter1
+a network is a collection of interconnected devices and systems that communicate and exchange data with each other. These devices can include computers, servers, routers, switches, and other networking hardware, as well as software components. Networks can be classified based on their size, scope, and purpose, such as:
+
+Local Area Network (LAN): A network that covers a small geographic area, such as a home, office, or building.
+Wide Area Network (WAN): A network that spans a large geographic area, connecting multiple LANs, typically using telecommunications links.
+Metropolitan Area Network (MAN): A network that covers a city or a large campus, larger than a LAN but smaller than a WAN.
+Personal Area Network (PAN): A network for personal devices, typically within a range of a few meters, such as Bluetooth connections.
+Virtual Private Network (VPN): A secure network that uses encryption and other security measures to create a private network over a public one, such as the internet.
+==================================================================
+the internet is a global system of interconnected computer networks that use the Internet Protocol (IP) suite to communicate between networks and devices. It is a vast and complex network of networks, consisting of private, public, academic, business, and government networks of local to global scope.
+================================================================
+ROUTER->1.filtering
+2.forwording
+3.routing
+4.floating
+5.no collision
+=================================================================
+SWITCH ->IT IS MULTI PORT BRIDGE
+CONNECT DIFFERENT DEVICE 
+connection is full duplex
+no collision
+===============================================================
+repeater->regerate the strength ,two port device, forwording but no filtering
+==========================================================
+hub-work on physical layer and multiport reaperter
+==================================================
+bridge-phy & datalink
+
+divide lager network into smaller for more manageable segment and tell which machine is connected to which port
+====================================================
+unicaste, broadcaste,multicast
+=================================================
+
+design issue in 
+Design Issue	Definition	Key Challenges
+Framing	Dividing data stream into frames	Frame delimitation, synchronization, handling variable-length frames
+Error Control	Ensuring data integrity	Balancing detection/correction capability with overhead, handling high error rates
+Flow Control	Managing data transmission rate	Adapting to varying conditions, minimizing delays
+Addressing	Identifying source and destination	Ensuring global uniqueness, efficient address resolution
+Media Access Control (MAC)	Controlling medium access	Ensuring fair access, minimizing collisions, managing retransmissions
+======================================
+flow control protocal 1.go and wait && || 2. go back n (sliding window) 2m-1 && 1 || 3.selective repeat arq(sliding window) the frame not acknowlegeed was ent again if 2 only 2 is sent
+  2. if window size is 4 012356
+2 is not not recieed 2 is sent again as 2345
+==========================================
+hamming distance=xor btw two values (0000 && 1111)=>differ value=1
+minimum hamming distance =2
+===================================================
+
+single parity bit odd =>1 add kro and even ho to 0
+=====================================================
+ETHERNET--->thernet is a widely used technology for local area networks (LANs), providing a framework for data communication between devices within a network. It operates primarily in the Data Link Layer and the Physical Layer of the OSI model. Ethernet is known for its simplicity, scalability, and reliability, making it the foundation of most modern wired LANs.
+==============================================
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

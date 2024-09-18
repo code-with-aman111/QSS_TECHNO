@@ -1,0 +1,38 @@
+class Solution
+{
+    public:
+    struct Node* addTwoLists(struct Node* first, struct Node* second){
+       struct Node* temp1=first;
+       struct Node* temp2=second;
+     
+       int temp3=0;
+       struct Node*  temp=new struct Node(0);
+       while(temp1!=NULL && temp2!=NULL){
+          if(temp1->data+temp2->data+temp3<10){
+          temp3=0;
+          temp->next=temp1->data+temp2->data;
+          temp1=temp1->next;
+          temp2=temp2->next;
+          }
+          else if(temp1->data+temp2->data+temp3>9){
+          temp3=1;
+          Node* temp4=temp1->data+temp2->data-10;
+          temp->next=temp4;
+          temp1=temp1->next;
+          temp2=temp2->next;
+          }
+          temp=temp->next;
+       } 
+       if(temp1!=NULL){
+           temp->next=temp1->data;
+           temp1=temp1->next;
+           temp=temp->next;
+       }
+      else{
+           temp->next=temp2->data;
+           temp2=temp2->next;
+           temp=temp->next; 
+      }
+      return temp->next;
+    }
+};

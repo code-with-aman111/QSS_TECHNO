@@ -1,0 +1,64 @@
+
+Sure! Let's dive into a comprehensive example that includes routing, middleware, and form handling in an Express application.
+
+1. Routing
+Routing in Express is how you define different endpoints (or routes) for your application. Each route can respond to different HTTP methods (GET, POST, etc.).
+
+2. Middleware
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. Middleware can execute code, modify the request and response objects, end the request-response cycle, and call the next middleware in the stack.
+
+3. Form Handling
+Form handling involves processing data sent from an HTML form. Typically, form data is sent via a POST request, and the server processes the data and responds accordingly.
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const app = express();
+
+// Middleware to parse JSON and URL-encoded data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Middleware to parse cookies
+app.use(cookieParser());
+
+// Custom middleware to log request details
+app.use((req, res, next) => {
+  console.log(`Received ${req.method} request for ${req.url}`);
+  next(); // Pass control to the next handler
+});
+
+// Route to display the form
+app.get('/form', (req, res) => {
+  res.send(`
+    <form action="/submit" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <button type="submit">Submit</button>
+    </form>
+  `);
+});
+
+// Route to handle form submission
+app.post('/submit', (req, res) => {
+  // Access form data
+  const name = req.body.name;
+
+  // Set a cookie with the name
+  res.cookie('name', name, { maxAge: 900000, httpOnly: true });
+
+  res.send(`Hello, ${name}! Your data has been received and a cookie has been set.`);
+});
+
+// Route to read the cookie
+app.get('/hello', (req, res) => {
+  const name = req.cookies.name;
+  if (name) {
+    res.send(`Hello again, ${name}!`);
+  } else {
+    res.send('Hello, guest!');
+  }
+});
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
