@@ -65,3 +65,24 @@ window.addEventListener("scroll", updateContent);
 window.addEventListener("resize", updateContent);
 document.addEventListener("mousemove", updateCursorCircle);
 updateContent();
+
+const background = document.querySelector(".Elevate");
+const icon_ind = document.querySelector(".icon_con .ind");
+const icon_usa = document.querySelector(".icon_con .usa");
+const address = document.querySelector(".add p");
+const mobile = document.querySelector(".mob p");
+
+icon_usa.addEventListener("click", () => {
+  background.style.backgroundImage =
+    "url('/asssets/services+elevate+eng+reno/7.jpg')";
+  address.innerHTML =
+    "215 East 78th Street - Suite 200, Bloomington, Minnesota 55420";
+  mobile.innerHTML = "+1 612 201 1169";
+});
+icon_ind.addEventListener("click", () => {
+  background.style.backgroundImage =
+    "url('/asssets/services+elevate+eng+reno/8.jpg')";
+  address.innerHTML =
+    "H-149, 1st Floor, Office No. 101, Sector 63, Noida 201301";
+  mobile.innerHTML = "+91 93-107-47505";
+});

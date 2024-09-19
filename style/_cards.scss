@@ -1,56 +1,129 @@
 $card-bg: #fff;
 $card-border: #ddd;
 $card-flip-bg: #484444;
-$card-bak:#191717;
+$card-bak: #191717;
 
-.cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    background-color: $card-bak;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  padding: 2rem 1rem;
 }
 
 .card-container {
-    perspective: 1000px;
-    display: flex;
-    justify-content: space-evenly;
+  perspective: 1000px;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
 }
 
 .card_hero {
-    width: 300px;
-    height: 40vh;
-    margin-left: 5px;
-    position: relative;
-    transform-style: preserve-3d; 
-    transition: transform 0.6s;
+  width: 23%;
+  height: 28vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
 
 .card_hero:hover {
-    transform: rotateY(180deg); 
+  transform: rotateY(180deg);
 }
 
 .card-front,
 .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // border: 1px solid $card-border;
-    background-color: $card-flip-bg;
-    color: $card-bg;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $card-flip-bg;
+  color: $card-bg;
 }
 
 .card-front {
-    z-index: 2; 
-    transform: rotateY(0deg); 
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: #232323;
+  h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .mobile_p {
+    display: none;
+  }
 }
 
 .card-back {
-    transform: rotateY(180deg); 
-    background-color: red;
+  transform: rotateY(180deg);
+  background-color: $highlight;
+  padding: 1rem;
+  p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .cards {
+    padding: 2rem 1.5rem;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .card_hero {
+      width: 100%;
+      transition: none;
+      height: 33 vh;
+    }
+    .card_hero:hover {
+      transform: none;
+    }
+    .card-front {
+      p {
+        font-size: 0.9rem;
+      }
+      .mobile_p {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    padding: 2rem 1.5rem;
+  }
+  .card-container {
+    .card_hero {
+      padding: 1rem 0;
+      height: 36vh;
+    }
+    .card-front {
+      padding: 0 1rem;
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+      }
+      .mobile_p {
+        text-align: center;
+      }
+    }
+  }
 }

@@ -1,727 +1,954 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/main.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--  -->
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
 
-  <!--  -->
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>Document</title>
+  </head>
 
-  <title>Document</title>
-</head>
-
-<body>
-  <nav class="main_nav">
-    <div class="logo">
-      <img src="https://www.qsstechnosoft.com/wp-content/uploads/2024/01/logo-white.svg " alt="" srcset="" />
-    </div>
-
-    <div class="about_nav">
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#hire">Hire</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="btn">
-      <button class="btn_nav">Generative AI</button>
-    </div>
-
-    <!-- Hamburger checkbox -->
-    <input type="checkbox" id="menu_toggle" class="menu_toggle" />
-    <label for="menu_toggle" class="hamburger">
-      <!-- Hamburger icon -->
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <!-- Navigation Bar for mobiles -->
-    <div class="mobile_nav">
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#hire">Hire</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero">
-      <div class="vdo">
-        <video autoplay loop muted>
-          <source src="asssets/video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+  <body>
+    <nav class="main_nav">
+      <div class="logo">
+        <img src="./asssets/others/logo.svg" alt="" srcset="" />
       </div>
-      <div class="vdo_text">
-        <div class="text">
-          <h2>Innovating Your Business with Next-Gen Solutions</h2>
-          <h1><span class="auto-type"></span></h1>
-        </div>
-        <div class="btn">
-          <div class="btn_book">
-            <button class="cons btn_x">Book consulatation</button>
-            <button class="port btn_x">View Portfolio</button>
+      <div class="about_nav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#technology">Technologies</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#hire">Hire</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#career">Career</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn_nav">
+          <div class="circle_div">
+            <div class="pulse"></div>
+            <div class="circle"></div>
           </div>
-          <div class="btn_rate">
-            <button class="rat btn_x">
-              <img src="/asssets/qss-reviews-icon.png" alt="" srcset="">
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="cards">
-      <div class="card-container">
-        <div class="card_hero card1">
-          <div class="card-front">
-            <h1>$100M+</h1>
-            <h1>Investment</h1>
-            <p>Raised By Start-ups.</p>
-          </div>
-          <div class="card-back">
-            <p>Facilitated start ups by developing MVP level but scalable solutions</p>
-          </div>
-        </div>
-        <div class="card_hero card2">
-          <div class="card-front">
-            <h1>400+</h1>
-            <h1>Projects!</h1>
-            <p>That Succesfully Delived.</p>
-          </div>
-          <div class="card-back">
-            <p>BFeel honoured delivering web and mobile applications to our customers</p>
-          </div>
-        </div>
-        <div class="card_hero card3">
-          <div class="card-front">
-            <h1>250+</h1>
-            <h1>Associates!</h1>
-            <p>The Real Backbone</p>
-          </div>
-          <div class="card-back">
-            <p>Empowered with experience and skillful workforce, diverse technology exposure</p>
-          </div>
-        </div>
-        <div class="card_hero card4">
-          <div class="card-front">
-            <!-- Front content -->
-            <h1>13+</h1>
-            <h1>Years!</h1>
-            <p>The Splendid Journey</p>
-          </div>
-          <div class="card-back">
-            <p>We are proud to be an established software development services company</p>
-          </div>
-        </div>
-            
-      </div>
-    </section>
-    <section class="exp-section">
-      <div class="exp-img"><img src="asssets/handshake.jpg" alt=""></div>
-
-      <div class="experience">
-        <div class="experience-container">
-          <div class="bracket left"></div>
-          <div class="bracket right"></div>
-          <div class="experience-content">
-            <div class="years">30+</div>
-            <div class="text">Years<br />Experience<br />working</div>
-          </div>
-        </div>
-        <div class="experience-container-right">
-          <h1 class="new_s">Cutting-edge <span>Tech Solution</span> Pioneers</h1>
-          <h3>Innovating with a digital mindset</h3>
-          <p>
-            QSS Technosoft, a leading provider of software development
-            services, represents a team of 250+ skillful associates, who rely
-            on building scalable and smart solutions satisfying the client’s
-            quest for an exceptional product. Being specialized in every
-            vertical of industries, our world-class software solutions range
-            from developing highly intriguing web & mobile apps to integrating
-            technologies like Blockchain, Chatbot, AI, Data Analytics,
-            cloud-based services and more.
-          </p>
-          <button>Become a partner</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="services-container">
-      <h1 class="services-heading">Our Services</h1>
-      <p class="servies-p">
-        The product life cycle at QSS, is a blended composition of our
-        technical expertise with best practices across industries to develop
-        products attaining larger markets share and fetching greater ROI to
-        our customers.
-      </p>
-      `
-      <div class="scroll-container">
-        <div class="fixed-content">
-          <div class="text-content">
-            <div class="content" data-index="0">
-              <h2>UI/UX Design</h2>
-              <p>
-                Build smart and intuitive UI/UX Design for an amazing and
-                meaningful end-user experience A responsive user interface
-                design plays a decisive role during the design and development
-                of web or mobile applications. When a user visits your web
-                page or application, your UI/UX design is the first thing that
-                will create an impression.
-              </p>
-              <button>Explore ></button>
-            </div>
-            <div class="content" data-index="1">
-              <h2>App Development</h2>
-              <p>
-                Augment your business performance and customer experience with
-                powerful and custom mobile app development. In this fast-paced
-                technological era, businesses struggle to adapt. We provide
-                tailored mobile app development solutions, aligning with your
-                audience's preferences. Whether enhancing workforce engagement
-                or improving service accessibility, our customer-centric iOS
-                and Android solutions are here to support you.
-              </p>
-              <button>Explore</button>
-            </div>
-            <div class="content" data-index="2">
-              <h2>Web Development</h2>
-              <p>
-                Unleash the power of progressive web development services to
-                deliver an interactive and immersive user experience. We craft
-                dynamic, interactive & high-performing web applications with
-                cross-browser compatibility and responsive design. Whether you
-                require an in-house web application for seamless management of
-                employee outlays, selling products, or enhancing customer
-                services, we develop intuitive apps your audience will love.
-                Our experienced developers cater to all your technology needs.
-              </p>
-              <button>Explore ></button>
-            </div>
-            <div class="content" data-index="3">
-              <h2>AI/Machine Learning</h2>
-              <p>
-                AI Power-driven and Highly Intuitive Chatbots – A
-                Ground-breaking software to improve your customer
-                interactions. Over 80% of customers prefer reaching out to
-                their favorite brands through messaging. Businesses leverage
-                Chatbots to enhance customer engagement, answer queries,
-                generate leads, boost sales, and improve contact center
-                efficiency. Chatbots offer a streamlined and scalable
-                conversational system that communicates with potential
-                customers, understanding their intentions and responding
-                accordingly.
-              </p>
-              <button>Explore ></button>
-            </div>
-            <div class="content" data-index="4">
-              <h2>QA & Testing Services</h2>
-              <p>
-                Enhance the overall functionality and appearance of your
-                mobile apps with integrated agile quality assurance and
-                testing solutions. In a crowded market of web and mobile apps,
-                consumers prioritize user-friendly, secure, and
-                high-performing applications with zero crash rates or
-                installation error rates. Our quality assurance & testing
-                service ensures seamless user experience through comprehensive
-                multi-stage testing. We optimize site loading times and ensure
-                your apps are industry-ready before launch.
-              </p>
-              <button>Explore ></button>
-            </div>
-            <div class="content" data-index="5">
-              <h2>Support & Maintenance</h2>
-              <p>
-                Build smart and intuitive UI/UX Design for an amazing and
-                meaningful end-user experience Businesses are finding hard to
-                survive in this era of ever changing technology. We, at QSS
-                Technosoft, strives to offer support to these companies by
-                streamlining their business processes with our customized
-                mobile app development solutions, keeping in mind your target
-                audience’s tastes and preferences.
-              </p>
-              <button>Explore ></button>
-            </div>
-
-          </div>
-          <div class="image-content">
-            <div class="content" data-index="0">
-              <img src="asssets/1.jpg" alt="vv" />
-            </div>
-            <div class="content" data-index="1">
-              <img src="asssets/2.jpg" alt="" />
-            </div>
-            <div class="content" data-index="2">
-              <img src="asssets/3.jpg" alt="" />
-            </div>
-            <div class="content" data-index="3">
-              <img src="asssets/4.jpg" alt="" />
-            </div>
-            <div class="content" data-index="4">
-              <img src="asssets/5.jpg" alt="" />
-            </div>
-            <div class="content" data-index="5">
-              <img src="asssets/6.jpg" alt="" />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-<!--     
-    <section>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-        </div>
-
-        <div class="carousel-inner">
-          
-          <div class="carousel-item active">
-            <div class="carousel-content">
-              <div class="carousel-image">
-                <img src="asssets/1.jpg" class="d-block w-100" alt="Slide 1 Image">
-              </div>
-              <div class="carousel-text">
-                <h3>Slide 1 Heading</h3>
-                <p>This is the description for the first slide. Customize the text to match the image content.</p>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="carousel-item">
-            <div class="carousel-content">
-              <div class="carousel-image">
-                <img src="asssets/2.jpg" class="d-block w-100" alt="Slide 2 Image">
-              </div>
-              <div class="carousel-text">
-                <h3>Slide 2 Heading</h3>
-                <p>This is the description for the second slide. Adjust the content as needed.</p>
-              </div>
-            </div>
-          </div>
-
-        
-          <div class="carousel-item">
-            <div class="carousel-content">
-              <div class="carousel-image">
-                <img src="asssets/3.jpg" class="d-block w-100" alt="Slide 3 Image">
-              </div>
-              <div class="carousel-text">
-                <h3>Slide 3 Heading</h3>
-                <p>This is the description for the third slide. Provide your text here.</p>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="carousel-item">
-            <div class="carousel-content">
-              <div class="carousel-image">
-                <img src="asssets/4.jpg" class="d-block w-100" alt="Slide 4 Image">
-              </div>
-              <div class="carousel-text">
-                <h3>Slide 4 Heading</h3>
-                <p>This is the description for the fourth slide. Add your text here.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-       
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          GENERATIVE AI
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section> -->
-
-
-    <section class="Awards">
-      <div class="container">
-        <h1 class="text-award">Accredited with Awards and Achievements</h1>
-        <div class="row">
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/b1.jpg" alt="" class="card-img-top" height="300px">
-                  <!-- <h1>Expertise 2024</h1>
-                       <p>Best Mobile App Developer </p> -->
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/2b.jpg" alt="" class="card-img-top" height="300px">
-                  <!-- <h1>Clutch | 2019</h1>
-                      <p>Ranked among the world's top 10 Software Development Companies across USA</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/3b.jpg" alt="" class="card-img-top" height="300px">
-                  <!-- <h1>AppFutura | 2019</h1>
-                      <p>Recognized as the Best Web & App Development company across USA.</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/4b.jpg" alt="" class="card-img-top" height="300px">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/5b.jpg" alt="" class="card-img-top" height="300px">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/6b.jpg" alt="" class="card-img-top" height="300px">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-                  <img src="asssets/brand/8b.jpg" alt="" class="card-img-top" height="300px">
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Hamburger checkbox -->
+        <input type="checkbox" id="menu_toggle" class="menu_toggle" />
+        <!-- Hamburger icon -->
+        <label for="menu_toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <!-- Navigation Bar for mobiles -->
+        <div class="mobile_nav">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#hire">Hire</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
+    </nav>
 
+    <main>
+      <section class="hero">
+        <div class="vdo">
+          <video autoplay loop muted>
+            <source src="asssets/others/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="vdo_text">
+          <div class="text">
+            <h1>Innovating Your Business with Next-Gen Solutions</h1>
+            <h1><span class="auto-type"></span></h1>
+          </div>
+          <div class="btn">
+            <div class="btn_book">
+              <button class="cons btn_x">Book a consultation</button>
+              <button class="port btn_x">View Portfolio</button>
+            </div>
+            <div class="btn_rate">
+              <button class="rat btn_x">
+                <img
+                  src="/asssets/others/qss-reviews-icon.png"
+                  alt=""
+                  srcset=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="Brands">
-      <div class="Brand_div">
-      <h1 class="brand_h1"><span>80+ Brands</span> Love To Work With Us</h1>
-     <p class="brand_p">We are humbly thankful to our customers for showing trust and granting us the opportunities to work for their visionary products, which boost us with confidence to deliver quality solutions for them with courage</p> 
-      <div class="grid-container">
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/Abzooba-blk-1.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/Botplan.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/cnhi.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/cnhi.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/cropped-logo.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/Eldermark_Software.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/HAL.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/Matrix.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/Matrix.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/nevada.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/Sports-Clips.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/stratum.png" alt="" srcset="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/stratum.png" alt="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/TSI.png" alt="">
-        </div>
-        <div class="grid-item">
-          <img src="asssets/Afflibrand/zscaler.png" alt="" srcset="">
-        </div>
-      </div>
-    </div>
-    </section>
-    <section class="Renovate">
-      <div class="main_revo">
-      <div class="img_reno">
-        <img src="asssets/Afflibrand/hand_1.jpeg" alt="Hand Image">
-      </div>
-    
-      <!-- Corrected this to <div class="form_reno"> -->
-      <div class="form_reno">
-        <h1 class="form_h1">Renovate Unique Business Processes into Digitally Transformed Solutions with QSS Technosoft!</h1>
-        <p>Do you want to remove manual operations, acting as an impediment to your business growth? Realize your ideas on reliable web and mobile software solutions with our professional services. Take the first step to launch your project by filling out this form.</p>
-        
-        <form action="/submit" class="form_new">
-          <div class="in_x1">
-            <label for="name">Full Name*</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+      <section class="cards">
+        <div class="card-container">
+          <div class="card_hero card1">
+            <div class="card-front">
+              <h1>$100M+</h1>
+              <h2>INVESTMENT!</h2>
+              <p>Raised By Start-ups.</p>
+              <p class="mobile_p">
+                Facilitated start ups by developing MVP level but scalable
+                solutions.
+              </p>
+            </div>
+            <div class="card-back">
+              <p>
+                Facilitated start ups by developing MVP level but scalable
+                solutions.
+              </p>
+            </div>
           </div>
-          <div class="in_x2">
-            <label for="email">Email Address*</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+          <div class="card_hero card2">
+            <div class="card-front">
+              <h1>400+</h1>
+              <h2>PROJECTS!</h2>
+              <p>That Successfully Delivered.</p>
+              <p class="mobile_p">
+                Feel honoured delivering web and mobile applications to our
+                customers.
+              </p>
+            </div>
+            <div class="card-back">
+              <p>
+                Feel honoured delivering web and mobile applications to our
+                customers.
+              </p>
+            </div>
           </div>
-         <div class="in_x3">
-           <label for="phone">Phone Number*</label><br>
-           <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{2}[0-9]{10}" value="+91" required><br><br>
-         </div>
-           <div class="in_x4">
-           <label for="file">Attachment</label><br>
-           <input type="file" id="file" name="file"><br>
-         </div>
-          <div class="in_x5">
-            <label for="message">Message*</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <button type="submit" >FREE consulatation</button>
+          <div class="card_hero card3">
+            <div class="card-front">
+              <h1>250+</h1>
+              <h2>ASSOCIATES!</h2>
+              <p>The Real Backbone.</p>
+              <p class="mobile_p">
+                Empowered with experience and skillful workforce, diverse
+                technology exposure.
+              </p>
+            </div>
+            <div class="card-back">
+              <p>
+                Empowered with experience and skillful workforce, diverse
+                technology exposure.
+              </p>
+            </div>
           </div>
-          </form>
+          <div class="card_hero card4">
+            <div class="card-front">
+              <!-- Front content -->
+              <h1>13+</h1>
+              <h2>YEARS!</h2>
+              <p>The Splendid Journey.</p>
+              <p class="mobile_p">
+                We are proud to be an established software development services
+                company.
+              </p>
+            </div>
+            <div class="card-back">
+              <p>
+                We are proud to be an established software development services
+                company.
+              </p>
+            </div>
           </div>
-      </div>
-    </section>
-    <section class="Engagement">
-     <div class="Eng_main">
-      <div class="Eng_txt">
-        <h1 class="Eng_h1">Our Engagement Model</h1>
-        <p class="Eng_p">Elevate your software development journey with our customized engagement models,
-          tailored to meet your unique needs and foster a collaborative partnership for success.</p>
         </div>
-       <div class="btn_Eng">
-        <button>Engagement Model</button>
-       </div>
-     </div>
-    </section>
+      </section>
 
+      <section class="exp-section">
+        <div class="exp-img"><img src="asssets/services+elevate+eng+reno/handshake.jpg" alt="" /></div>
 
-    <section class="Elevate">
-      <div class="text_ele">
-       <p>We're Here for You</p>
-       <h1>Elevate Your Business to New <span class="a_m">Heights!</span></h1>
-       <p>Collaborate with Us Now for Service Excellence</p>
-       <div class="icon_con">
-        <div class="usa">
-         <img src="asssets/address/usa-pin-icon.png" alt="" >
-        </div>
-        <div class="ind">
-         <img src="asssets/address/india-pin-icon.png" alt="">
-        </div>
-       </div>
-       <h1>USA</h1>
-       <div class="tag_loc x1">
-        <div class="loc">
-          <i class="fas fa-map-marker-alt icon"></i>
-        </div>
-        <div class="add">
-          <p>215 East 78th Street - Suite 200, Bloomington, Minnesota 55420</p>
-        </div>
-       </div>
-        <div class="tag_mas x1">
-          <div class="mas">
-            <i class="fas fa-envelope icon"></i>
+        <div class="experience">
+          <div class="experience-container">
+            <div class="bracket left"></div>
+            <div class="bracket right"></div>
+            <div class="experience-content">
+              <div class="years">30+</div>
+              <div class="text">Years<br />Experience<br />working</div>
+            </div>
           </div>
-          <div class="em">
-            <p>hello@qsstechnosoft.com</p>
+          <div class="experience-container-right">
+            <h1 class="new_s">
+              Cutting-edge <span>Tech Solution</span> Pioneers
+            </h1>
+            <h3>Innovating with a digital mindset</h3>
+            <p>
+              QSS Technosoft, a leading provider of software development
+              services, represents a team of 250+ skillful associates, who rely
+              on building scalable and smart solutions satisfying the client’s
+              quest for an exceptional product. Being specialized in every
+              vertical of industries, our world-class software solutions range
+              from developing highly intriguing web & mobile apps to integrating
+              technologies like Blockchain, Chatbot, AI, Data Analytics,
+              cloud-based services and more.
+            </p>
+            <button>Become a partner</button>
           </div>
         </div>
-        <div class="box_mas x1">
-          <div class="bag">
-            <i class="fas fa-map-marker-alt icon"></i>
-          </div>
-          <div class="car">
-            <p>career@qsstechnosoft.com</p>
-          </div>
-        </div>
-        <div class="ph x1">
-          <div class="phone">
-            <i class="fas fa-phone icon"></i>
-          </div>
-          <div class="mob">
-            <p>+1 612 201 1169</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <section class="footer">
-    <div class="footer__top">
-      <div class="footer__top-company">
-        <div class="footer__top-company-img">
-          <img src="https://www.qsstechnosoft.com/wp-content/uploads/2024/01/logo-white.svg " alt="" height="50px"/>
-        </div>
-        <p>
-          QSS Technosoft is a global provider of high-quality software
-          development services delivering world-class software solutions to
-          SMEs focused on data analytics, big data, process automation,
-          desktop and web solutions, e-commerce solutions, mobile
-          applications & Digital marketing services.
+      <section class="services-container">
+        <h1 class="services-heading">Our Services</h1>
+        <p class="servies-p">
+          The product life cycle at QSS, is a blended composition of our
+          technical expertise with best practices across industries to develop
+          products attaining larger markets share and fetching greater ROI to
+          our customers.
         </p>
-        <div class="footer__top-company-socials">
-          <div class="socials fb"><img src="./facebook-new.svg" alt="" /></div>
-          <div class="socials ig"><img src="./insta_logo.svg" alt="" /></div>
-          <div class="socials twt"><img src="./twitter.svg" alt="" /></div>
-          <div class="socials li"><img src="./linkedin-new.svg" alt="" /></div>
-          <div class="socials pin">
-            <img src="./pinterest-new.svg" alt="" />
+        <div class="scroll-container">
+          <div class="fixed-content">
+            <div class="text-content">
+              <div class="content" data-index="0">
+                <h2>UI/UX Design</h2>
+                <p>
+                  Build smart and intuitive UI/UX Design for an amazing and
+                  meaningful end-user experience
+                </p>
+                <p>
+                  A responsive user interface design plays a decisive role
+                  during the design and development of web or mobile
+                  applications. When a user visits your web page or application,
+                  your UI/UX design is the first thing that will create an
+                  impression.
+                </p>
+                <button>Explore ></button>
+              </div>
+              <div class="content" data-index="1">
+                <h2>App Development</h2>
+                <p>
+                  Augment your business performance and customer experience with
+                  powerful and custom mobile app development.
+                </p>
+                <p>
+                  In this fast-paced technological era, businesses struggle to
+                  adapt. We provide tailored mobile app development solutions,
+                  aligning with your audience's preferences. Whether enhancing
+                  workforce engagement or improving service accessibility, our
+                  customer-centric iOS and Android solutions are here to support
+                  you.
+                </p>
+                <button>Explore</button>
+              </div>
+              <div class="content" data-index="2">
+                <h2>Web Development</h2>
+                <p>
+                  Unleash the power of progressive web development services to
+                  deliver an interactive and immersive user experience.
+                </p>
+                <p>
+                  We craft dynamic, interactive & high-performing web
+                  applications with cross-browser compatibility and responsive
+                  design. Whether you require an in-house web application for
+                  seamless management of employee outlays, selling products, or
+                  enhancing customer services, we develop intuitive apps your
+                  audience will love. Our experienced developers cater to all
+                  your technology needs.
+                </p>
+                <button>Explore ></button>
+              </div>
+              <div class="content" data-index="3">
+                <h2>AI/Machine Learning</h2>
+                <p>
+                  AI Power-driven and Highly Intuitive Chatbots – A
+                  Ground-breaking software to improve your customer
+                  interactions.
+                </p>
+                <p>
+                  Over 80% of customers prefer reaching out to their favorite
+                  brands through messaging. Businesses leverage Chatbots to
+                  enhance customer engagement, answer queries, generate leads,
+                  boost sales, and improve contact center efficiency. Chatbots
+                  offer a streamlined and scalable conversational system that
+                  communicates with potential customers, understanding their
+                  intentions and responding accordingly.
+                </p>
+                <button>Explore ></button>
+              </div>
+              <div class="content" data-index="4">
+                <h2>QA & Testing Services</h2>
+                <p>
+                  Enhance the overall functionality and appearance of your
+                  mobile apps with integrated agile quality assurance and
+                  testing solutions.
+                </p>
+                <p>
+                  In a crowded market of web and mobile apps, consumers
+                  prioritize user-friendly, secure, and high-performing
+                  applications with zero crash rates or installation error
+                  rates. Our quality assurance & testing service ensures
+                  seamless user experience through comprehensive multi-stage
+                  testing. We optimize site loading times and ensure your apps
+                  are industry-ready before launch.
+                </p>
+                <button>Explore ></button>
+              </div>
+              <div class="content" data-index="5">
+                <h2>Support & Maintenance</h2>
+                <p>
+                  Build smart and intuitive UI/UX Design for an amazing and
+                  meaningful end-user experience
+                </p>
+                <p>
+                  Businesses are finding hard to survive in this era of ever
+                  changing technology. We, at QSS Technosoft, strives to offer
+                  support to these companies by streamlining their business
+                  processes with our customized mobile app development
+                  solutions, keeping in mind your target audience’s tastes and
+                  preferences.
+                </p>
+                <button>Explore ></button>
+              </div>
+            </div>
+            <div class="image-content">
+              <div class="content" data-index="0">
+                <img src="asssets/services+elevate+eng+reno/1.jpg" alt="vv" />
+              </div>
+              <div class="content" data-index="1">
+                <img src="asssets/services+elevate+eng+reno/2.jpg" alt="" />
+              </div>
+              <div class="content" data-index="2">
+                <img src="asssets/services+elevate+eng+reno/3.jpg" alt="" />
+              </div>
+              <div class="content" data-index="3">
+                <img src="asssets/services+elevate+eng+reno/4.jpg" alt="" />
+              </div>
+              <div class="content" data-index="4">
+                <img src="asssets/services+elevate+eng+reno/5.jpg" alt="" />
+              </div>
+              <div class="content" data-index="5">
+                <img src="asssets/services+elevate+eng+reno/6.jpg" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="socials yt"><img src="./youtube-new.svg" alt="" /></div>
-          <div class="socials skp"><img src="./skype-new.svg" alt="" /></div>
+        </div>
+      </section>
+
+      <section class="Awards">
+        <div class="container">
+          <h1 class="text-award">Accredited with Awards and Achievements</h1>
+          <div class="row">
+            <div class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/b1.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>TopFirms | 2024</h1>
+                    <p>
+                      Ranked as one of the Top Mobile App Development Companies
+                      in 2020.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/2b.svg"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>Techreviewer | 2024</h1>
+                    <p>
+                      Ranked among the top cross platform app developers in
+                      2024.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/3b.svg"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>MirrorReview | 2019</h1>
+                    <p>
+                      10 Best Enterprise Mobility Leaders to watch out for in
+                      2019.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/4b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>TopDevelopers | 2020</h1>
+                    <p>
+                      Ranked asone of the Best Mobile App Development Companies
+                      in 2020.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/5b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>SoftwareWorld | 2020</h1>
+                    <p>
+                      Ranked among the world's top mobile app development
+                      companies in USA.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/6b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>SelectedFirms | 2020</h1>
+                    <p>
+                      Ranked among the top mobile app development companies in
+                      India.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/8b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>App Development Companies | 2020</h1>
+                    <p>
+                      Ranked among the top mobile app developers in Minnesota.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/9b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>Clutch | 2019</h1>
+                    <p>
+                      Ranked among the world's top 10 Software Development
+                      Companies across USA.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/10b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>AppFutura | 2019</h1>
+                    <p>
+                      Recognized as the Best Web & App Development Companies in
+                      2019.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/11b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>CMMI Level 3 | 2021</h1>
+                    <p>
+                      Acheived the prestigious quality certifications of CMMI
+                      Level 3.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/12b.png"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>ISO 27001:2013 | 2021</h1>
+                    <p>Certified as ISO 27001:2013 company in INDIA.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div>
+                      <img
+                        src="asssets/brand/13b.svg"
+                        alt=""
+                        class="card-img-top"
+                        height="300px"
+                      />
+                    </div>
+                    <h1>Expertise | 2024</h1>
+                    <p>Best Mobile App Developers in Brooklyn Park.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Brands">
+        <div class="Brand_div">
+          <h1 class="brand_h1"><span>80+ Brands</span> Love To Work With Us</h1>
+          <p class="brand_p">
+            We are humbly thankful to our customers for showing trust and
+            granting us the opportunities to work for their visionary products,
+            which boost us with confidence to deliver quality solutions for them
+            with courage
+          </p>
+          <div class="grid-container">
+            <div class="grid-item">
+              <img
+                src="asssets/Afflibrand/Abzooba-blk-1.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/Botplan.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/cnhi.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/cropped-logo.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img
+                src="asssets/Afflibrand/Eldermark_Software.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/HAL.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/Matrix.png" alt="" srcset="" />
+            </div>
+
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/nevada.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/Sports-Clips.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/stratum.png" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/TSI.png" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/zscaler.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/shiftpixy.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/plaoalto.png" alt="" srcset="" />
+            </div>
+            <div class="grid-item">
+              <img src="asssets/Afflibrand/motherdairy.png" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Renovate">
+        <div class="img_reno">
+          <img src="asssets/Afflibrand/hand_1.jpeg" alt="Hand Image" />
+        </div>
+
+        <div class="form_reno">
+          <h1 class="form_h1">
+            Renovate Unique Business Processes into Digitally Transformed
+            Solutions with <span>QSS Technosoft!</span>
+          </h1>
+          <p>
+            Do you want to remove manual operations, acting as an impediment to
+            your business growth? Realize your ideas on reliable web and mobile
+            software solutions with our professional services. Take the first
+            step to launch your project by filling out this form.
+          </p>
+
+          <form action="/submit" class="form_new">
+            <div class="row1">
+              <div class="in_x1">
+                <label for="name">Full Name<span>*</span></label>
+                <div>
+                  <input type="text" id="name" name="name" required />
+                  <i class="fa-regular fa-user"></i>
+                </div>
+              </div>
+              <div class="in_x2">
+                <label for="email">Email Address<span>*</span></label>
+                <div>
+                  <input type="email" id="email" name="email" required />
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="in_x3">
+                <label for="phone">Phone Number<span>*</span></label>
+                <div>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="[+]{1}[0-9]{2}[0-9]{10}"
+                    value="+91"
+                    required
+                  />
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+              </div>
+              <div class="in_x4">
+                <label for="file">Attachment</label>
+                <div>
+                  <input type="file" id="file" name="file" />
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+            </div>
+            <div class="in_x5">
+              <label for="message">Message<span>*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Free Consultation</button>
+          </form>
+          <p>Looking for jobs? Connect with us here.</p>
+        </div>
+      </section>
+
+      <section class="Engagement">
+        <div class="eng_img">
+          <img src="./asssets/services+elevate+eng+reno/engagement-models-cta-banner.jpg" alt="" />
+        </div>
+        <div class="Eng_txt">
+          <h1 class="Eng_h1">Our Engagement Model</h1>
+          <p class="Eng_p">
+            Elevate your software development journey with our customized
+            engagement models,<br />
+            tailored to meet your unique needs and foster a collaborative
+            partnership for success.
+          </p>
+          <div class="btn_Eng">
+            <button>Engagement Model</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="Elevate">
+        <div class="text_ele">
+          <p>We're Here for You</p>
+          <h1>
+            Elevate Your Business to New <span class="a_m">Heights!</span>
+          </h1>
+          <p>Collaborate with Us Now for Service Excellence</p>
+          <div class="icon_con">
+            <div class="usa">
+              <img src="asssets/address/usa-pin-icon.png" alt="" />
+            </div>
+            <div class="ind">
+              <img src="asssets/address/india-pin-icon.png" alt="" />
+            </div>
+          </div>
+          <h4>USA</h4>
+          <div class="tag_loc x1">
+            <div class="loc">
+              <i class="fas fa-map-marker-alt icon"></i>
+            </div>
+            <div class="add">
+              <p>
+                215 East 78th Street - Suite 200, Bloomington, Minnesota 55420
+              </p>
+            </div>
+          </div>
+          <div class="tag_mas x1">
+            <div class="mas">
+              <i class="fas fa-envelope icon"></i>
+            </div>
+            <div class="em">
+              <p>hello@qsstechnosoft.com</p>
+            </div>
+          </div>
+          <div class="box_mas x1">
+            <div class="bag">
+              <i class="fas fa-map-marker-alt icon"></i>
+            </div>
+            <div class="car">
+              <p>career@qsstechnosoft.com</p>
+            </div>
+          </div>
+          <div class="ph x1">
+            <div class="phone">
+              <i class="fas fa-phone icon"></i>
+            </div>
+            <div class="mob">
+              <p>+1 612 201 1169</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="footer">
+      <div class="footer__top">
+        <div class="footer__top-company">
+          <div class="footer__top-company-img">
+            <img src="./asssets/others/logo-white.png" alt="" height="50px" />
+          </div>
+          <p>
+            QSS Technosoft is a global provider of high-quality software
+            development services delivering world-class software solutions to
+            SMEs focused on data analytics, big data, process automation,
+            desktop and web solutions, e-commerce solutions, mobile applications
+            & Digital marketing services.
+          </p>
+          <div class="footer__top-company-socials">
+            <div class="socials fb">
+              <img src="./asssets/footer/facebook-new.svg" alt="" />
+            </div>
+            <div class="socials ig">
+              <img src="./asssets/footer/insta_logo.svg" alt="" />
+            </div>
+            <div class="socials twt">
+              <img src="./asssets/footer/twitter.svg" alt="" />
+            </div>
+            <div class="socials li">
+              <img src="./asssets/footer/linkedin-new.svg" alt="" />
+            </div>
+            <div class="socials pin">
+              <img src="./asssets/footer/pinterest-new.svg" alt="" />
+            </div>
+            <div class="socials yt">
+              <img src="./asssets/footer/youtube-new.svg" alt="" />
+            </div>
+            <div class="socials skp">
+              <img src="./asssets/footer/skype-new.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="footer__top-links">
+          <h1>Industries</h1>
+          <a href="#">Healthcare & Fitness</a>
+          <a href="#">GIS</a>
+          <a href="#">Law Enforcement</a>
+          <a href="#">Transportation & Logistics</a>
+          <a href="#">Sports</a>
+          <a href="#">Biometrics</a>
+        </div>
+        <div class="footer__top-links services">
+          <h1>Services</h1>
+          <a href="#">Web & Mobile Application Development</a>
+          <a href="#">eCommerce Development</a>
+          <a href="#">UI/UX Design & QA & Testing</a>
+          <a href="#">AI/Machine Learning</a>
+          <a href="#">CLoud Services</a>
+          <a href="#">Chatbot & Blockchain Development</a>
+          <a href="#">Support & Maintenance</a>
+        </div>
+        <div class="footer__top-links">
+          <h1>Quick Links</h1>
+          <a href="#">About Us</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Career</a>
+          <a href="#">Blog</a>
+          <a href="#">Credits</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="footer__top-links technologies">
+          <h1>Technologies</h1>
+          <div>
+            <a href="#">IOS & Android App</a>
+            <a href="#">React Native</a>
+            <a href="#">Xamarin App</a>
+            <a href="#">ReactJS</a>
+            <a href="#">AngularJS</a>
+            <a href="#">Node.js</a>
+            <a href="#">Java</a>
+            <a href="#">C#/.Net</a>
+            <a href="#">Golang</a>
+            <a href="#">Solidity Blockchain</a>
+            <a href="#">Flutter</a>
+          </div>
         </div>
       </div>
-      <div class="footer__top-links">
-        <h1>Industries</h1>
-        <a href="#">Healthcare & Fitness</a>
-        <a href="#">GIS</a>
-        <a href="#">Law Enforcement</a>
-        <a href="#">Transportation & Logistics</a>
-        <a href="#">Sports</a>
-        <a href="#">Biometrics</a>
-      </div>
-      <div class="footer__top-links services">
-        <h1>Services</h1>
-        <a href="#">Web & Mobile Application Development</a>
-        <a href="#">eCommerce Development</a>
-        <a href="#">UI/UX Design & QA & Testing</a>
-        <a href="#">AI/Machine Learning</a>
-        <a href="#">CLoud Services</a>
-        <a href="#">Chatbot & Blockchain Development</a>
-        <a href="#">Support & Maintenance</a>
-      </div>
-      <div class="footer__top-links">
-        <h1>Quick Links</h1>
-        <a href="#">About Us</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Career</a>
-        <a href="#">Blog</a>
-        <a href="#">Credits</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-      </div>
-      <div class="footer__top-links technologies">
-        <h1>Technologies</h1>
-        <div>
-          <a href="#">IOS & Android App</a>
-          <a href="#">React Native</a>
-          <a href="#">Xamarin App</a>
-          <a href="#">ReactJS</a>
-          <a href="#">AngularJS</a>
-          <a href="#">Node.js</a>
-          <a href="#">Java</a>
-          <a href="#">C#/.Net</a>
-          <a href="#">Golang</a>
-          <a href="#">Solidity Blockchain</a>
-          <a href="#">Flutter</a>
+      <div class="footer__bottom">
+        <div class="footer__bottom-ssl">
+          <img src="./asssets/footer/ssl-stamp.svg" alt="" />
         </div>
+        <p>2010 - 2024 © QSS Technosoft</p>
+        <p>Full stack mobile and web app design and development company.</p>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="footer__bottom-ssl">
-        <img src="./ssl-stamp.svg" alt="" />
-      </div>
-      <p>2010 - 2024 © QSS Technosoft</p>
-      <p>Full stack mobile and web app design and development company.</p>
-    </div>
-  </section>
+    </section>
 
-
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed(".auto-type", {
-      strings: ["Saleforce Integration", "BlockChain Solution", "cloud Services"],
-      typeSpeed: 150,
-      backSpeed: 150,
-      looped: Infinity
-    })
-    //--------------------chat gpt----------->
-    $(document).ready(function () {
-      $('.owl-carousel').owlCarousel({
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: [
+          "Salesforce Integration",
+          "BlockChain Solutions",
+          "Cloud Services",
+          "Generative AI",
+        ],
+        typeSpeed: 150,
+        backSpeed: 150,
         loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 2
-          },
-          1000: {
-            items: 3
-          }
-        }
       });
-    });
-
-  </script>
-  <script src="script.js"></script>
-</body>
-
+      //--------------------chat gpt----------->
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,45 +1,86 @@
 .Engagement {
-    background-image: url('/asssets/engagement-models-cta-banner.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: rgb(118, 0, 100);
+
+  .eng_img {
+    // z-index: -1;
+    top: 0;
+    opacity: 0.5;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
-  
-  .Eng_main {
-    text-align: center;
-    color: white; 
-  }
-  
+}
+
+.Eng_txt {
+  position: absolute;
   .Eng_h1 {
-    // text-align: center;
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     margin-bottom: 20px;
   }
-  
   .Eng_p {
-    // text-align: center;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     margin-bottom: 30px;
   }
 
-  // .btn_Eng{
-  //   text-align: center;
-  // }
-  
   .btn_Eng button {
     padding: 10px 20px;
     border: none;
-    cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    transition: all 0.5s ease;
   }
-  
   .btn_Eng button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: rgb(0, 0, 0);
   }
-  
+}
+
+@media screen and (max-width: 990px) {
+  .Eng_txt {
+    .Eng_h1 {
+      font-size: 1.5rem;
+    }
+    .Eng_p {
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 660px) {
+  .Eng_txt {
+    .Eng_h1 {
+      font-size: 1rem;
+    }
+    .Eng_p {
+      font-size: 0.8rem;
+    }
+    .btn_Eng button {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .Eng_txt {
+    .Eng_h1 {
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+    .Eng_p {
+      font-size: 0.6rem;
+      margin-bottom: 10px;
+    }
+    .btn_Eng button {
+      font-size: 0.6rem;
+      padding: 5px 10px;
+    }
+  }
+}

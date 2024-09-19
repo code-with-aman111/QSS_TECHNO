@@ -1,139 +1,167 @@
-// styles.scss
 .footer {
-    background-color: #181818;
-    color: rgba(255, 255, 255, 0.799);
-  
+  background-color: #181818;
+  color: rgba(255, 255, 255, 0.799);
+
+  &__top {
+    padding: 4rem 1rem;
+    display: grid;
+    grid-template-columns: 380px repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    justify-content: space-between;
+
+    &-company {
+      flex: 0.5;
+      padding-right: 2rem;
+      p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 2rem;
+      }
+      &-socials {
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 0.5rem;
+        div {
+          background-color: #202020;
+          border-radius: 50%;
+          padding: 0.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .socials {
+          transition: all 0.3s;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .socials:hover {
+          transform: scale(1.05);
+          cursor: pointer;
+        }
+        .fb:hover {
+          background-color: #4060a5;
+        }
+        .ig:hover {
+          background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+        }
+        .twt:hover {
+          background-color: black;
+        }
+        .li:hover {
+          background-color: #002b63;
+        }
+        .pin:hover {
+          background-color: #cb2027;
+        }
+        .yt:hover {
+          background-color: #bb0000;
+        }
+        .skp:hover {
+          background-color: #09adec;
+        }
+      }
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      // justify-content: space-between;
+      h1 {
+        color: white;
+        font-size: 1.3rem;
+      }
+      a {
+        text-decoration: none;
+        width: fit-content;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.799);
+        position: relative; /* To position the pseudo-element */
+        transition: color 0.3s ease-in-out; /* Transition for color */
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transition: width 0.5s ease-in-out; /* Transition for the underline */
+      }
+
+      a:hover {
+        color: white;
+      }
+
+      a:hover::before {
+        width: 100%; /* Animate width to make the underline grow */
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      grid-column-gap: 6rem;
+    }
+    @media screen and (max-width: 740px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__bottom {
+    background-color: #000000;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    p {
+      margin-bottom: 0;
+    }
+    &-ssl {
+      img {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.technologies > div {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  a {
+    border: 1px solid rgba(255, 255, 255, 0.799);
+    border-radius: 5px;
+    padding: 0.5rem;
+    &:hover::before {
+      width: 0;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer {
     &__top {
-      padding: 4rem 1rem;
-      display: grid;
-      grid-template-columns: 380px repeat(auto-fill, minmax(200px, 1fr));
-      grid-column-gap: 1.5rem;
-      grid-row-gap: 1.5rem;
-      justify-content: space-between;
-  
       &-company {
-        flex: 0.5;
-        padding-right: 2rem;
         p {
-          margin-top: 1rem;
-          font-size: 0.9rem;
-          line-height: 2rem;
+          font-size: 0.8rem;
+          line-height: normal;
         }
         &-socials {
-          margin-top: 1.5rem;
-          display: flex;
-          gap: 0.5rem;
           div {
-            background-color: #202020;
-            border-radius: 50%;
-            padding: 0.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-  
-          .socials {
-            transition: all 0.3s;
-          }
-          .socials:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-          }
-  
-          .fb:hover {
-            background-color: #4060a5;
-          }
-          .ig:hover {
-            background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
-          }
-          .twt:hover {
-            background-color: black;
-          }
-          .li:hover {
-            background-color: #002b63;
-          }
-          .pin:hover {
-            background-color: #cb2027;
-          }
-          .yt:hover {
-            background-color: #bb0000;
-          }
-          .skp:hover {
-            background-color: #09adec;
+            width: 6rem;
           }
         }
-      }
-  
-      &-links {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        // justify-content: space-between;
-        h1 {
-          color: white;
-          font-size: 1.3rem;
-        }
-        a {
-          text-decoration: none;
-          font-size: 0.9rem;
-          color: rgba(255, 255, 255, 0.799);
-          position: relative; /* To position the pseudo-element */
-          transition: color 0.3s ease-in-out; /* Transition for color */
-        }
-  
-        a::before {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 1px;
-          bottom: 0;
-          left: 0;
-          background-color: white;
-          transition: width 0.5s ease-in-out; /* Transition for the underline */
-        }
-  
-        a:hover {
-          color: white;
-        }
-  
-        a:hover::before {
-          width: 100%; /* Animate width to make the underline grow */
-        }
-      }
-  
-      @media screen and (max-width: 991px) {
-        grid-column-gap: 6rem;
-      }
-      @media screen and (max-width: 560px) {
-        display: flex;
-        flex-direction: column;
       }
     }
     &__bottom {
-      background-color: #000000;
-      padding: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 0.8rem;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-  
-      &-ssl {
-        img {
-          width: 70%;
-        }
-      }
+      flex-direction: column;
+      align-items: start;
     }
   }
-  
-  .technologies > div {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    a {
-      border: 1px solid rgba(255, 255, 255, 0.799);
-      border-radius: 5px;
-      padding: 0.5rem;
-    }
-  }
+}
